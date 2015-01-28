@@ -1,0 +1,61 @@
+﻿@model ExposurePresenter.Web.Models.ExposurePresenterViewModel
+<style>
+    .box {
+        float: left;
+        width: 12px;
+        height: 12px;
+        margin-right: 2px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, .2);
+    }
+
+    .legend-item {
+        line-height: 80%;
+    }
+</style>
+<script>
+
+    var opt = {
+        animation: true,
+
+        // Number - Number of animation steps
+        animationSteps: 60,
+
+        legendTemplate: '<div class="legend-item">' +
+            '<% for (var i=0; i<datasets.length; i++) { %>'
+            + ' <div class="box" style="background-color:<%=datasets[i].pointColor%>\"></div>'
+            + '<div><% if (datasets[i].label) { %><%= datasets[i].label %><% } %>'
+            + '</div><br/>'
+            + '<% } %>'
+            + '</div>',
+
+        responsive: true,
+        multiTooltipTemplate: "<%= datasetLabel %> : <%= value %>"
+    };
+
+    var myLineChart;
+    var ctx = document.getElementById("myChart").getContext("2d");
+   
+    function refreshGraph(data) {
+        if (data != undefined) {
+
+            if (myLineChart == undefined) {
+                myLineChart = new Chart(ctx).Line(data, opt);
+            } else {
+                myLineChart.destroy();
+                myLineChart = new Chart(ctx).Line(data, opt);
+            }
+            var legend = myLineChart.generateLegend();
+            $('#legend').html(legend);
+        }
+    }
+
+</script>
+
+<div style="width: 85% ;height: 100%;float:left">
+    <canvas id="myChart" height="400" width="1100"></canvas>
+  
+</div>
+
+<div style="width: 15% ;float:left" id="legend" height="100"></div>

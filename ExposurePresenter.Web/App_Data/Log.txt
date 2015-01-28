@@ -1,0 +1,6 @@
+Opened connection at 1/21/2015 1:19:45 AM +01:00
+IF db_id(N'aspnet-ExposurePresenter.Web-20150116045837') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'aspnet-ExposurePresenter.Web-20150116045837'
+-- Executing at 1/21/2015 1:19:45 AM +01:00
+-- Completed in 27 ms with result: 1
+
+Closed connection at 1/21/2015 1:19:46 AM +01:00

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExposurePresenter.Web", "ExposurePresenter.Web\ExposurePresenter.Web.csproj", "{47C6A7F4-B866-4F7E-BFB0-9FD70D66C559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExposurePresenter.Web.Tests", "ExposurePresenter.Web.Tests\ExposurePresenter.Web.Tests.csproj", "{3E9A273E-5B01-4315-BFB9-B8A74D2C222D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{D90B1655-A579-4588-A960-F6DD9B4BEFF3}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{F21C6699-6B0D-4112-B8AB-E242A8198846}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\ExposurePresenterWeb-WAWS-dev.json = PublishScripts\Configurations\ExposurePresenterWeb-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExposurePresenter.DataInput", "ExposurePresenter.DataInput\ExposurePresenter.DataInput.csproj", "{9E414C45-8E69-4626-AB03-BE12B6DF98EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExposurePresenter.Domain", "ExposurePresenter.Domain\ExposurePresenter.Domain.csproj", "{93C06D49-780D-4D30-99BC-5EE9EE9684CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47C6A7F4-B866-4F7E-BFB0-9FD70D66C559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C6A7F4-B866-4F7E-BFB0-9FD70D66C559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C6A7F4-B866-4F7E-BFB0-9FD70D66C559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C6A7F4-B866-4F7E-BFB0-9FD70D66C559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9A273E-5B01-4315-BFB9-B8A74D2C222D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9A273E-5B01-4315-BFB9-B8A74D2C222D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9A273E-5B01-4315-BFB9-B8A74D2C222D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9A273E-5B01-4315-BFB9-B8A74D2C222D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E414C45-8E69-4626-AB03-BE12B6DF98EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E414C45-8E69-4626-AB03-BE12B6DF98EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E414C45-8E69-4626-AB03-BE12B6DF98EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E414C45-8E69-4626-AB03-BE12B6DF98EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C06D49-780D-4D30-99BC-5EE9EE9684CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C06D49-780D-4D30-99BC-5EE9EE9684CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C06D49-780D-4D30-99BC-5EE9EE9684CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C06D49-780D-4D30-99BC-5EE9EE9684CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F21C6699-6B0D-4112-B8AB-E242A8198846} = {D90B1655-A579-4588-A960-F6DD9B4BEFF3}
+	EndGlobalSection
+EndGlobal

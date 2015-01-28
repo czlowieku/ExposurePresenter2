@@ -1,0 +1,72 @@
+﻿@model ExposurePresenter.Web.Models.ExposurePresenterViewModel
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#exposureTable")
+            .tablesorter({ widthFixed: true, widgets: ['zebra'] });
+    }
+   );
+</script>
+    <table class="tablesorter" id="exposureTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.Label("Lp.")
+                </th>
+                <th>
+                    @Html.Label("Marka")
+                </th>
+                <th>
+                    @Html.Label("Dyscyplina")
+                </th>
+                <th>
+                    @Html.Label("Branża")
+                </th>
+                <th>
+                    @Html.Label("Miesiąc")
+                </th>
+                <th>
+                    @Html.Label("Liczba ekspozycji")
+                </th>
+                <th>
+                    @Html.Label("Ekwiwalent reklamowy")
+                </th>
+            </tr>
+        </thead> 
+        <tbody>
+            @{var counter = 0;
+                foreach (var item in Model.ExposureRecords)
+                {
+                    counter++;
+                    <tr>
+                        <td>
+                            @counter.
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brand)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Discipline)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Branch)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Month)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Value)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody> 
+    </table>
+
+
+
